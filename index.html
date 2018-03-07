@@ -75,10 +75,17 @@
   <div class="container">
     <div class="ico"></div>
     <div class="modal-block">
-      <h1>Установка водонагревателей.</h1>
+      <h1 class="header">Установка водонагревателей.</h1>
       <p class="description">Выезд специалиста по Ульяновску - 1500 рyблей. В стоимость входит: монтаж водонагревателя, подключение к системе холодного и горячего водоснабжения, установка обратного клапана и проверка работоспособности.</p>
       <p class="call-to-action">Звоните: <a class="telephone" href="tel:+79999999999">+7[999]999-99-99</a></p>
     </div>
   </div>
 </body>
+<script>
+  if (location.search) {
+    var header = (new URL(location.href)).searchParams.get('request')
+    var tag = document.getElementsByClassName('header')[0]
+    if (tag) { tag.innerHTML = header }
+  }
+</script>
 </html>
